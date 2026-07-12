@@ -12,11 +12,6 @@ export class EventosController {
     return this.eventosService.listarEventos();
   }
 
-  @Get(':titulo')
-  buscarPorTitulo(@Param('titulo') titulo: string) {
-    return this.eventosService.buscarPorTitulo(titulo);
-  }
-
   @Get('buscarPorID/:id')
   buscarPorId(@Param('id') id: string) {
     const idNumero = Number(id);
@@ -26,6 +21,11 @@ export class EventosController {
     }
 
     return this.eventosService.buscarPorId(idNumero);
+  }
+
+  @Get(':titulo')
+  buscarPorTitulo(@Param('titulo') titulo: string) {
+    return this.eventosService.buscarPorTitulo(titulo);
   }
 
   @Post()
