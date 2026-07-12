@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Delete, BadRequestException, Param } from '@nestjs/common';
 import { EventosService } from './eventos.service';
+import { CreateEventoDto } from './dto/create-evento.dto';
 
 @Controller('eventos')
 export class EventosController {
@@ -27,20 +28,7 @@ export class EventosController {
   }
 
   @Post()
-  registrarEvento(
-    @Body()
-    body: {
-      titulo: string;
-      descricao: string;
-      data_inicio: string;
-      data_fim: string;
-      local: string;
-    },
-  ) {
-    if (!body.titulo || !body.descricao || !body.data_inicio || !body.data_fim || !body.local) {
-      throw new BadRequestException("Preencha todos os campos obrigatórios!");
-    }
-
+  registrarEvento(@Body() body: CreateEventoDto) {
     return this.eventosService.registrarEvento(body);
   }
 

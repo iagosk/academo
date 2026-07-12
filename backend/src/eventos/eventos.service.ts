@@ -7,13 +7,15 @@ type Evento = {
   data_inicio: string;
   data_fim: string;
   local: string;
+  tipo?: string;
+  capacidade?: number;
 }
 
 @Injectable()
 export class EventosService {
   private eventos : Evento[] = [
-    { id: 1, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd" },
-    {id: 2, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd"},
+    { id: 1, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "palestra", capacidade: 50 },
+    {id: 2, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "oficina", capacidade: 30},
     { id: 3, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd" }
   ];
 
