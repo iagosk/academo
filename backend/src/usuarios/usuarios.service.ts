@@ -2,21 +2,19 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 
 type Usuario = {
   id: number;
-  titulo: string;
-  descricao: string;
-  data_inicio: string;
-  data_fim: string;
-  local: string;
-  tipo?: string;
-  capacidade?: number;
+  nome: string;
+  email: string;
+  senha: string;
+  instituicao: string;
+  tipo: 'Admin' | 'Estudante' | 'Professor';
 }
 
 @Injectable()
 export class UsuariosService {
   private usuarios: Usuario[] = [
-    { id: 1, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "palestra", capacidade: 50 },
-    { id: 2, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "oficina", capacidade: 30 },
-    { id: 3, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd" }
+    { id: 1, nome: "KLS", email: "dsddsds", senha: "sdjsdjds", instituicao: "EEQS", tipo: "Estudante" },
+    { id: 2, nome: "KLS", email: "dsddsds", senha: "sdjsdjds", instituicao: "EEQS", tipo: "Estudante" },
+    { id: 3, nome: "KLS", email: "dsddsds", senha: "sdjsdjds", instituicao: "EEQS", tipo: "Estudante" }
   ];
 
   listarUsuarios() {
