@@ -3,10 +3,6 @@ import { Transform } from 'class-transformer';
 
 export class UpdateEventoDto {
   @IsOptional()
-  @IsInt({ message: 'O id deve ser um número inteiro' })
-  id?: number;
-
-  @IsOptional()
   @IsString({ message: 'O título deve ser uma string' })
   titulo?: string;
 
