@@ -2,6 +2,10 @@ import { IsString, IsNotEmpty, IsOptional, IsInt, Min, IsDateString } from 'clas
 import { Transform } from 'class-transformer';
 
 export class CreateEventoDto {
+  @IsOptional()
+  @IsInt({ message: 'O id deve ser um número inteiro' })
+  id?: number;
+
   @IsString({ message: 'O título deve ser uma string' })
   @IsNotEmpty({ message: 'O título é obrigatório' })
   titulo: string;
