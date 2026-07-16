@@ -2,21 +2,21 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 
 type Atividade = {
   id: number;
+  id_evento: number;
   titulo: string;
   descricao: string;
-  data_inicio: string;
-  data_fim: string;
+  tipo: 'Palestra' | 'Minicurso' | ;
+  data_hora: string;
+  vagas_totais: number;
   local: string;
-  tipo?: string;
-  capacidade?: number;
 }
 
 @Injectable()
 export class AtividadesService {
   private atividades: Atividade[] = [
-    { id: 1, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "palestra", capacidade: 50 },
-    { id: 2, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "oficina", capacidade: 30 },
-    { id: 3, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd" }
+    { id: 1, id_evento: 1, titulo:"Dinâmica I", descricao: "dsldslkdlkd", tipo: 'Palestra', data_hora: "01-03-2026 19:00", vagas_totais: 3, local: "Auditório"},
+    { id: 2, id_evento: 1, titulo:"Dinâmica II", descricao: "dsldslkdlkd", tipo: 'Palestra', data_hora: "01-03-2026 19:00", vagas_totais: 3, local: "Auditório"},
+    { id: 3, id_evento: 1, titulo:"Dinâmica II", descricao: "dsldslkdlkd", tipo: 'Palestra', data_hora: "01-03-2026 19:00", vagas_totais: 3, local: "Auditório"},
   ];
 
   listarAtividades() {
@@ -37,7 +37,7 @@ export class AtividadesService {
     const atividade = this.atividades.find((item) => item.titulo === titulo);
 
     if (!atividade) {
-      throw new NotFoundException('Evento não encontrado!');
+      throw new NotFoundException('Atividade não encontrado!');
     }
 
     return atividade;
