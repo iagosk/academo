@@ -23,9 +23,9 @@ export class UsuariosController {
     return this.usuariosService.buscarPorId(idNumero);
   }
 
-  @Get(':titulo')
-  buscarPorTitulo(@Param('titulo') titulo: string) {
-    return this.usuariosService.buscarPorTitulo(titulo);
+  @Get(':nome')
+  buscarPorTitulo(@Param('titulo') nome: string) {
+    return this.usuariosService.buscarPorNome(nome);
   }
 
   @Post()

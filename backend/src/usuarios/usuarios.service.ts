@@ -1,4 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { CreateUsuarioDto } from './dto/create-usuario.dto';
+import { UpdateUsuarioDto } from './dto/update-usuario.dto';
 
 type Usuario = {
   id: number;
@@ -6,15 +8,15 @@ type Usuario = {
   email: string;
   senha: string;
   instituicao: string;
-  tipo: 'Admin' | 'Estudante' | 'Professor';
+  tipo_usuario: 'Admin' | 'Estudante' | 'Professor';
 }
 
 @Injectable()
 export class UsuariosService {
   private usuarios: Usuario[] = [
-    { id: 1, nome: "KLS", email: "dsddsds", senha: "sdjsdjds", instituicao: "EEQS", tipo: "Estudante" },
-    { id: 2, nome: "KLS", email: "dsddsds", senha: "sdjsdjds", instituicao: "EEQS", tipo: "Estudante" },
-    { id: 3, nome: "KLS", email: "dsddsds", senha: "sdjsdjds", instituicao: "EEQS", tipo: "Estudante" }
+    { id: 1, nome: "João Paulo", email: "jp@email.com", senha: "1234", instituicao: "EEQS", tipo_usuario: "Estudante" },
+    { id: 2, nome: "Maria Eduarda", email: "maria@email.com", senha: "123456", instituicao: "IFRN", tipo_usuario: "Estudante" },
+    { id: 3, nome: "José Anderson", email: "jose@email.com", senha: "12345678910", instituicao: "EEQS", tipo_usuario: "Professor" }
   ];
 
   listarUsuarios() {
@@ -31,8 +33,8 @@ export class UsuariosService {
     return usuario;
   }
 
-  buscarPorTitulo(titulo: string) {
-    const usuario = this.usuarios.find((item) => item.titulo === titulo);
+  buscarPorNome(nome: string) {
+    const usuario = this.usuarios.find((item) => item.nome === nome);
 
     if (!usuario) {
       throw new NotFoundException('Usuário não encontrado!');
@@ -41,7 +43,7 @@ export class UsuariosService {
     return usuario;
   }
 
-  registrarUsuario(dados: Omit<Usuario, 'id'>) {
+  registrarUsuario(dados: Omit<CreateUsuarioDto, 'id'>) {
     const novoUsuario: Usuario = {
       id: this.usuarios.length + 1,
       ...dados
@@ -51,7 +53,7 @@ export class UsuariosService {
     return novoUsuario;
   }
 
-  atualizarParcial(id: number, dados: Partial<Omit<Usuario, 'id'>>) {
+  atualizarParcial(id: number, dados: Partial<Omit<UpdateUsuarioDto, 'id'>>) {
     const usuario = this.buscarPorId(id);
     const atualizado = { ...usuario, ...dados };
 

@@ -7,10 +7,13 @@ import { EventosController } from './eventos/eventos.controller';
 import { UsuariosController } from './usuarios/usuarios.controller';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { UsuariosService } from './usuarios/usuarios.service';
+import { AtividadesController } from './atividades/atividades.controller';
+import { AtividadesModule } from './atividades/atividades.module';
+import { AtividadesService } from './atividades/atividades.service';
 
 @Module({
-  imports: [EventosModule, UsuariosModule],
-  controllers: [AppController, UsuariosController, EventosController],
-  providers: [AppService, UsuariosService, EventosService],
+  imports: [EventosModule, UsuariosModule, AtividadesModule],
+  controllers: [AppController, UsuariosController, EventosController, AtividadesController],
+  providers: [AppService, UsuariosService, EventosService, AtividadesService],
 })
 export class AppModule {}
