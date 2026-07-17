@@ -1,20 +1,48 @@
 const form = document.getElementById("loginForm");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
 
-    // Simulação
-    if (email === "admin@email.com" && senha === "123456") {
+    try {
 
-        window.location.href = "dashboard.html";
+        const resposta = await fetch("http://localhost:3030/usuarios/login", {
 
-    } else {
+            method: "POST",
 
-        alert("E-mail ou senha inválidos.");
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                email,
+                senha
+            })
+
+        });
+
+        const dados = await resposta.json();
+
+        if (resposta.ok) {
+
+            alert(dados.mensagem);
+
+            window.location.href = "dashboard.html";
+
+        } else {
+
+            alert(dados.message || dados.mensagem);
+
+        }
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        alert("Não foi possível conectar ao servidor.");
 
     }
 

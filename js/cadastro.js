@@ -43,7 +43,7 @@ form.addEventListener("submit", async (event) => {
 
         alert("Usuário cadastrado com sucesso!");
 
-        window.location.href = "login.html";
+        window.location.href = "dashboard.html";
 
     } catch (erro) {
 
