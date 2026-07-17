@@ -25,7 +25,7 @@ maior.
 | Integrante | Responsabilidade principal |
 |---|---|
 | Matheus Iago | Módulos, services e regras de negócio da aplicação |
-| Jardel Bezerra | Módulos, services e regras de negócio da aplicação |
+| Jardel Bezerra | Interface frontend da aplicação |
 | Josicleiton | DTOs e validações (`class-validator`) dos módulos de **Eventos** e **Atividades** |
 | Jhonata | DTOs e validações (`class-validator`) do módulo de **Usuários** |
 
