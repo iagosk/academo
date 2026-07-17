@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    border: 1px solid black;
+    padding: 30px;
+    width: 25vw;
+    height: 60vh;
+    flex-direction: column;
+    gap: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: none;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 5px;
+    background-color: #1f2937;
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6280ac;
+}
+
+
+
+
+
+
+
+
