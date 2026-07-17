@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Delete, BadRequestException, Param } from '@nestjs/common';
 import { AtividadesService } from './atividades.service';
 import { CreateAtividadeDto } from './dto/create-atividade.dto';
-import { UpdateAtividade } from './dto/update-atividade.dto';
+import { UpdateAtividadeDto } from './dto/update-atividade.dto';
 
 @Controller('atividades')
 export class AtividadesCotroller {
@@ -29,7 +29,7 @@ export class AtividadesCotroller {
   }
 
   @Post()
-  registrarEvento(@Body() body: CreateAtividadeDto) {
+  registrarAtividade(@Body() body: CreateAtividadeDto) {
     return this.atividadesService.registrarAtividade(body);
   }
 

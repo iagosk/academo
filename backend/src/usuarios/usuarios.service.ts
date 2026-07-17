@@ -61,6 +61,23 @@ export class UsuariosService {
     return atualizado;
   }
 
+  validarLogin(email: string, senha: string) {
+
+    const usuario = this.usuarios.find(
+      (u) => u.email === email && u.senha === senha
+    );
+
+    if (!usuario) {
+      throw new NotFoundException("E-mail ou senha inválidos.");
+    }
+
+    return {
+      mensagem: "Login realizado com sucesso.",
+      usuario
+    };
+
+  }
+
   remover(id: number) {
     const existe = this.usuarios.some((u) => u.id === id);
 

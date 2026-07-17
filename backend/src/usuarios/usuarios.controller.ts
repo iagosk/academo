@@ -29,7 +29,7 @@ export class UsuariosController {
   }
 
   @Post()
-  registrarEvento(@Body() body: CreateUsuarioDto) {
+  registrarUsuario(@Body() body: CreateUsuarioDto) {
     return this.usuariosService.registrarUsuario(body);
   }
 
@@ -46,6 +46,16 @@ export class UsuariosController {
     }
 
     return this.usuariosService.atualizarParcial(idNumero, body);
+  }
+
+  @Post("login")
+  login(@Body() body: { email: string; senha: string }) {
+
+    return this.usuariosService.validarLogin(
+      body.email,
+      body.senha
+    );
+
   }
 
   @Delete(':id')

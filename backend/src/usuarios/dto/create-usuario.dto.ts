@@ -10,25 +10,25 @@ export class CreateUsuarioDto {
   @IsString({ message: 'O nome deve ser uma string' })
   @IsNotEmpty({ message: 'O nome é obrigatório' })
   @MaxLength(50, { message: 'O nome deve ter no máximo 50 caracteres' })
-  nome: string;
+  nome!: string;
 
   @IsEmail({}, { message: 'Informe um e-mail válido' })
   @IsNotEmpty({ message: 'O e-mail é obrigatório' })
   @MaxLength(80, { message: 'O e-mail deve ter no máximo 80 caracteres' })
-  email: string;
+  email!: string;
 
   @IsString({ message: 'A senha deve ser uma string' })
   @IsNotEmpty({ message: 'A senha é obrigatória' })
   @MaxLength(50, { message: 'A senha deve ter no máximo 50 caracteres' })
-  senha: string;
+  senha!: string;
 
   @IsString({ message: 'A instituição deve ser uma string' })
   @IsNotEmpty({ message: 'A instituição é obrigatória' })
   @MaxLength(80, { message: 'A instituição deve ter no máximo 80 caracteres' })
-  instituicao: string;
+  instituicao!: string;
 
   @IsEnum(TipoUsuario, {
     message: 'O tipo de usuário deve ser Admin, Estudante ou Professor',
   })
-  tipo_usuario: TipoUsuario;
+  tipo_usuario!: TipoUsuario;
 }
