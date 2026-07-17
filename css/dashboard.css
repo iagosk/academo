@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+
+}
+
+button {
+    background-color: #1f2937;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6280ac;
+}

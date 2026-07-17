@@ -1,0 +1,192 @@
+.pagina-eventos {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 15px;
+}
+
+
+/* Lado do formulário */
+
+.form-evento,
+.lista-eventos {
+
+    width: 50%;
+
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+
+.form-evento h2,
+.lista-eventos h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Formulário */
+
+#eventoForm {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+#eventoForm input,
+#eventoForm textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+}
+
+
+#eventoForm textarea {
+
+    height: 120px;
+
+    resize: none;
+
+}
+
+
+#eventoForm button {
+
+    padding: 12px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+#eventoForm button:hover {
+
+    background-color: #3b82f6;
+
+}
+
+
+
+/* Lista de eventos */
+
+
+#eventosContainer {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+
+.card-evento {
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    background-color: #f8f8f8;
+
+}
+
+
+.card-evento h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.card-evento p {
+
+    margin: 8px 0;
+
+}
+
+
+
+/* Botões da lista */
+
+
+.card-evento button {
+
+    padding: 8px 15px;
+
+    margin-right: 10px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+
+
+.card-evento button:first-of-type {
+
+    background-color: #2563eb;
+
+    color: white;
+
+}
+
+
+
+.card-evento button:last-of-type {
+
+    background-color: #dc2626;
+
+    color: white;
+
+}
+
+
+.card-evento button:hover {
+
+    opacity: 0.8;
+
+}
+
+
+

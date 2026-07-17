@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/gerenciarEventos.css">
+    <title>Gerenciar Eventos</title>
+</head>
+
+<body>
+    <header>
+        <a class="title" href="index.html">
+            <h1>Academo</h1>
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="dashboard.html">Voltar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-eventos">
+
+
+        <section class="form-evento">
+
+
+            <h2>Criar Evento</h2>
+
+
+            <form id="eventoForm">
+
+
+                <input type="text" id="titulo" placeholder="Título" required>
+
+
+                <textarea id="descricao" placeholder="Descrição" required></textarea>
+
+
+                <label>Data início</label>
+
+                <input type="datetime-local" id="data_inicio" required>
+
+
+                <label>Data fim</label>
+
+                <input type="datetime-local" id="data_fim" required>
+
+
+                <input type="text" id="local" placeholder="Local" required>
+
+
+                <button type="submit">
+                    Criar Evento
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+
+        <section class="lista-eventos">
+
+
+            <h2>Eventos Criados</h2>
+
+
+            <div id="eventosContainer">
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 Academo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/gerenciarEventos.js"></script>
+
+</body>
+
+</html>

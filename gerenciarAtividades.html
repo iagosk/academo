@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gerenciarAtividades.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Gerenciar Atividades</title>
+</head>
+
+<body>
+    <header>
+        <a class="title" href="index.html">
+            <h1>Academo</h1>
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="dashboard.html">voltar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-atividades">
+
+
+        <section class="form-atividade">
+
+
+            <h2>Criar Atividade</h2>
+
+
+            <form id="atividadeForm">
+
+
+                <input type="text" id="titulo" placeholder="Título da atividade" required>
+
+
+
+                <textarea id="descricao" placeholder="Descrição da atividade" required></textarea>
+
+
+
+                <select id="tipo_atividade" required>
+
+                    <option value="">
+                        Tipo de atividade
+                    </option>
+
+                    <option value="Palestra">
+                        Palestra
+                    </option>
+
+                    <option value="Workshop">
+                        Workshop
+                    </option>
+
+                    <option value="Minicurso">
+                        Minicurso
+                    </option>
+
+                </select>
+
+
+
+
+                <input type="datetime-local" id="data_hora" required>
+
+
+
+
+                <input type="number" id="vagas_totais" placeholder="Quantidade de vagas" required>
+
+
+
+                <input type="text" id="local_especifico" placeholder="Local específico" required>
+
+
+
+                <button type="submit">
+                    Criar Atividade
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+
+
+        <section class="lista-atividades">
+
+
+            <h2>Atividades Criadas</h2>
+
+
+
+            <div id="atividadesContainer">
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 Academo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/gerenciarAtividades.js"></script>
+
+</body>
+
+</html>
