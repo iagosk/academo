@@ -34,5 +34,5 @@ export class CreateAtividadeDto {
     message: 'O tipo de atividade deve ser Oficina, Palestra ou Minicurso',
   })
   @IsNotEmpty({ message: 'O tipo de atividade é obrigatório' })
-  tipo_atividade!: TipoAtividade;
+  tipo_atividade!: string;
 }

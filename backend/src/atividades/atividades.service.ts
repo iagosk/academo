@@ -5,7 +5,7 @@ type Atividade = {
   id_evento: number;
   titulo: string;
   descricao: string;
-  tipo_atividade: 'Palestra' | 'Minicurso' | 'Oficina';
+  tipo_atividade: string;
   data_hora: string;
   vagas_totais: number;
   local_especifico: string;

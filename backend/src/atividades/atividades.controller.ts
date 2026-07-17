@@ -4,11 +4,11 @@ import { CreateAtividadeDto } from './dto/create-atividade.dto';
 import { UpdateAtividadeDto } from './dto/update-atividade.dto';
 
 @Controller('atividades')
-export class AtividadesCotroller {
-  constructor(private readonly atividadesService: AtividadesService) {}
+export class AtividadesController {
+  constructor(private readonly atividadesService: AtividadesService) { }
 
   @Get()
-  listarAtividades(){
+  listarAtividades() {
     return this.atividadesService.listarAtividades();
   }
 

@@ -14,9 +14,9 @@ type Evento = {
 @Injectable()
 export class EventosService {
   private eventos : Evento[] = [
-    { id: 1, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "palestra", capacidade: 50 },
-    {id: 2, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd", tipo: "oficina", capacidade: 30},
-    { id: 3, titulo: "KLS", descricao: "dsddsds", data_inicio: "sdjsdjds", data_fim: "dkdkdk", local: "fdjkdfkd" }
+    { id: 1, titulo: "Seminário de Integração", descricao: "Seminário voltado para os estudantes calouros", data_inicio: "01/04/2026", data_fim: "02/06/2026", local: "Auditório", tipo: "palestra", capacidade: 50 },
+    {id: 2, titulo: "Programa PartiuIF", descricao: "Apresentação voltada ao programa.", data_inicio: "05/06/2026", data_fim: "06/06/2026", local: "Ginásio", tipo: "oficina", capacidade: 30},
+    { id: 3, titulo: "Apresentação do Projeto Mulheres Mil", descricao: "Palestra do Projeto", data_inicio: "12/06/2026", data_fim: "12/06/2026", local: "Auditório" }
   ];
 
   listarEventos() {

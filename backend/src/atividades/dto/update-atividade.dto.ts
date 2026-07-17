@@ -34,5 +34,5 @@ export class UpdateAtividadeDto {
   @IsEnum(TipoAtividade, {
     message: 'O tipo de atividade deve ser Oficina, Palestra ou Minicurso',
   })
-  tipo_atividade?: TipoAtividade;
+  tipo_atividade?: string;
 }
