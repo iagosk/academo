@@ -3,7 +3,7 @@ services:
     build: .
     container_name: backend-academo
     ports:
-      - "3000:3000"
+      - "3030:3030"
     volumes:
       - .:/app
       - /app/node_modules
