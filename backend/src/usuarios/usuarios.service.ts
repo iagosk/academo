@@ -13,7 +13,7 @@ type Usuario = {
 @Injectable()
 export class UsuariosService {
   private usuarios: Usuario[] = [
-    { id: 1, nome: "João Paulo", email: "jp@email.com", senha: "1234", instituicao: "EEQS"},
+    { id: 1, nome: "João Paulo", email: "jp@email.com", senha: "1234678", instituicao: "EEQS"},
     { id: 2, nome: "Maria Eduarda", email: "maria@email.com", senha: "123456", instituicao: "IFRN"},
     { id: 3, nome: "José Anderson", email: "jose@email.com", senha: "12345678910", instituicao: "EEQS"}
   ];

@@ -15,6 +15,6 @@ export class UpdateUsuarioDto {
   senha?: string;
 
   @IsOptional()
-  @IsString({ message: 'O telefone deve ser uma string' })
-  telefone?: string;
+  @IsString({ message: 'A instituição deve ser uma string' })
+  instituicao?: string;
 }

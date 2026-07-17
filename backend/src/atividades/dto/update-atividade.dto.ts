@@ -1,4 +1,4 @@
-import { IsEnum, IsString, IsInt, IsDateString, IsOptional } from 'class-validator';
+import { IsEnum, IsString, IsInt, IsDateString, IsOptional, IsNumber } from 'class-validator';
 
 export enum TipoAtividade {
   Oficina = 'Oficina',
@@ -7,6 +7,9 @@ export enum TipoAtividade {
 }
 
 export class UpdateAtividadeDto {
+  @IsNumber()
+  id_evento?: number;
+
   @IsOptional()
   @IsString({ message: 'O título deve ser uma string' })
   titulo?: string;

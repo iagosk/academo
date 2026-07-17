@@ -1,7 +1,11 @@
+// atividades.module.ts
 import { Module } from '@nestjs/common';
 import { AtividadesService } from './atividades.service';
+import { AtividadesCotroller } from './atividades.controller';
 
 @Module({
-  providers: [AtividadesService]
+  controllers: [AtividadesCotroller],
+  providers: [AtividadesService],
+  exports: [AtividadesService],
 })
-export class AtividadesModule {}
+export class AtividadesModule { }
