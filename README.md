@@ -243,6 +243,10 @@ etapa. A única variável reconhecida atualmente é:
 
 A API está publicada no [Render](https://render.com/), em:
 
+**Interface:**
+**https://interface-academo.onrender.com/**
+
+**Serviço:**
 **https://academo.onrender.com**
 
 O ambiente publicado conta com verificação de saúde (health check) e
@@ -259,5 +263,4 @@ evidências de monitoramento da execução, conforme exigido pelo projeto.
 
 ## 11. Próximos passos
 
-Itens do escopo do projeto final ainda pendentes: interface Web de consumo da
-API e, consequentemente, a rota de upload de arquivos.
+Itens do escopo do projeto final ainda pendentes: implementação de autenticação dos usuários.
