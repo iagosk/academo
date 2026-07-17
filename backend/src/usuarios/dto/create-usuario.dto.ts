@@ -1,11 +1,5 @@
 import { IsEmail, IsEnum, IsNotEmpty, IsString, MaxLength } from 'class-validator';
 
-export enum TipoUsuario {
-  Admin = 'Admin',
-  Estudante = 'Estudante',
-  Professor = 'Professor',
-}
-
 export class CreateUsuarioDto {
   @IsString({ message: 'O nome deve ser uma string' })
   @IsNotEmpty({ message: 'O nome é obrigatório' })
@@ -26,9 +20,4 @@ export class CreateUsuarioDto {
   @IsNotEmpty({ message: 'A instituição é obrigatória' })
   @MaxLength(80, { message: 'A instituição deve ter no máximo 80 caracteres' })
   instituicao!: string;
-
-  @IsEnum(TipoUsuario, {
-    message: 'O tipo de usuário deve ser Admin, Estudante ou Professor',
-  })
-  tipo_usuario!: TipoUsuario;
 }

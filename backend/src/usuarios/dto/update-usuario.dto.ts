@@ -17,8 +17,4 @@ export class UpdateUsuarioDto {
   @IsOptional()
   @IsString({ message: 'O telefone deve ser uma string' })
   telefone?: string;
-
-  @IsOptional()
-  @IsString({ message: 'O tipo deve ser uma string' })
-  tipo?: string;
 }
