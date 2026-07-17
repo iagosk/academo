@@ -1,1 +1,1 @@
-const API_URL = "http://localhost:3030";
+const API_URL = "https://academo.onrender.com";
