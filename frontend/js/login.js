@@ -9,7 +9,7 @@ form.addEventListener("submit", async function (event) {
 
     try {
 
-        const resposta = await fetch("http://localhost:3030/usuarios/login", {
+        const resposta = await fetch("https://academo.onrender.com/usuarios/login", {
 
             method: "POST",
 
